@@ -1,0 +1,53 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "z3",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#parameters"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment",
+					"match": ";.*"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword",
+					"match": "\\((check-sat\\)|get-model\\)|declare-\\w*)"
+				}
+			]
+		},
+		"functions": {
+			"patterns": [
+				{
+					"name": "entity.name.function",
+					"match": "\\((.\\w*|=>) "
+				}
+			]
+		},
+		"parameters": {
+			"patterns": [
+				{
+					"name": "variable.parameter",
+					"match": ".*\\)"
+				}
+			]
+		}
+	},
+	"scopeName": "source.z3"
+}

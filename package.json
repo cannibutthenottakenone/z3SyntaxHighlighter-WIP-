@@ -1,0 +1,25 @@
+{
+  "name": "z3syntaxhighlighting",
+  "displayName": "Z3SyntaxHighlighting",
+  "description": "a simple syntax highlighter for z3",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.72.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "z3",
+      "aliases": ["z3", "z3"],
+      "extensions": ["z3"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "z3",
+      "scopeName": "source.z3",
+      "path": "./syntaxes/z3.tmLanguage.json"
+    }]
+  }
+}
